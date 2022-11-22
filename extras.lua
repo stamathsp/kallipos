@@ -1,3 +1,4 @@
+
 function Para (elem)
   if #elem.content == 1 and elem.content[1].t == "Image" then
     local img = elem.content[1]

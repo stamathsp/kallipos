@@ -1,3 +1,4 @@
+
 function Image(img)
       if img.classes:find('epigraph',1) then
         local f = io.open("quotes/" .. img.src, 'r')
