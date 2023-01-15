@@ -1,21 +1,21 @@
 [submodule "extras"]
 	path = extras
-	url = https://github.com/pibook/extras.git
+	url = https://github.com/stamathsp/extras.git
 	branch = master
 [submodule "quotes"]
 	path = quotes
-	url = https://github.com/pibook/_quotes.git
+	url = https://github.com/stamathsp/_quotes.git
 	branch = master
 [submodule "figures"]
 	path = figures
-	url = https://github.com/pibook/_gallery
+	url = https://github.com/stamathsp/_gallery
 [submodule "images"]
 	path = images
-	url = https://github.com/pibook/images
+	url = https://github.com/stamathsp/images
 [submodule "text"]
 	path = text
-	url = https://github.com/mibook/text.git
+	url = https://github.com/stamathsp/text.git
 	branch = main
 [submodule "bibliography"]
 	path = bibliography
-	url = https://github.com/pibook/bibliography.git
+	url = https://github.com/stamathsp/bibliography.git

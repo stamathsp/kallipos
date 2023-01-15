@@ -11,6 +11,11 @@ if [ ! -d "./book" ]; then
    mkdir ./book
 fi
 
+if [ ! -d "./epub" ]; then
+   echo " creating missing directory for(epub)"
+   mkdir ./epub
+fi
+
 echo "  Making the text/pre.txt to latex/pre.tex..."
 pandoc text/pre.txt --lua-filter=epigraph.lua --to markdown | pandoc --top-level-division=chapter --to latex > latex/pre.tex
 
@@ -39,5 +44,8 @@ echo "  Creating the .pdf book from the .tex files. Be patient."
 pandoc -N --quiet --variable "geometry=margin=1.2in" --variable mainfont="MesloLGS NF Regular" --variable sansfont="MesloLGS NF Regular" --variable monofont="MesloLGS NF Regular" --variable fontsize=12pt --variable version=2.0 book/book.tex  --pdf-engine=xelatex --toc -o book/book.pdf
 
 echo "  The process has finished successfully! Well done :)"
+
+echo " Starting the conversion of the book. "
+pandoc --quiet -f latex tex/book.tex -o epub/book.epub
 
 #sed -i '' 's+Figure+Εικόνα+g' ./latex/ch0*
